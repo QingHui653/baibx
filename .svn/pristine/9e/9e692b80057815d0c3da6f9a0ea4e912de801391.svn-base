@@ -1,0 +1,11 @@
+*{margin:0;pa动态加载数据ing:0;}
+body{font-size:14px;color:#444;font-family:"微软雅黑",Arial;background:#fff;}
+a{color:#444;text-decoration: none;}
+a:hover{color:#065BC2;text-decoration: none;}
+.clear{clear:both;}
+img{border:none;vertical-align: mi动态加载数据le;}
+ul{list-style: none;}
+#qqq td{ border-right: 1px solid #CCC; border-bottom:1px solid #CCC; padding-top: 5px; padding-bottom:5px;}
+.a { height:20%}
+.s{ width:70%; text-align:center}
+.x{width:30%; text-align:center}

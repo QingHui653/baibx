@@ -1,0 +1,11 @@
+/*.all{ padding-top:0%; width:100%; text-align:center; background-color:#92D050}
+.all td { background-color:#F7BA00; padding-top:2%; padding-bottom:2%; border:#FFFFFF 5px solid}
+.all a{text-decoration:none;color:#000000; }*/
+.ys{ border-left:#000 1px solid;color:#9900FF;}
+.all tr td{ border-bottom:#000 1px solid; padding-bottom:5px; text-align:center; padding-top:10px; padding-bottom:10px;}
+.number{ width:50px; text-align:center; background-color:#F63}
+
+.ziti a{ text-decoration:none}
+.button{ padding-top:10px;}
+.ziti{ font-size:18px; height:40px; background-color:#F90; padding-top:15px;}
+

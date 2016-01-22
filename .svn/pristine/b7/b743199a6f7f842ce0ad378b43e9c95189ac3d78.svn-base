@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#666666; display:block;}
+.welcome a:hover{color:red;}
+.Information1024 a:hover{color:#fb8b01;}
+.fr{ float:right;}
+.fl{ float:left;}
+ul{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2{ margin:0; padding:0; font-weight:normal; font-size:100%;}
+
+.welcome{ width:100%; height:50px; background-color:#fafafa; border-bottom:1px solid #ebebeb; padding:0 7%;}
+.welcome div{ font-family:"宋体"; font-size:20px; color:#666666; line-height:50px;}
+.Telephone{ margin-right:30px;}
+
+.nav{ width:1024px; height:125px; margin:auto;}
+.nav li{ float:left; margin:40px 0;}
+.nav li a{ font-size:30px; border-radius:3px; padding:5px 15px; margin:0 20px;}
+.shouye:hover{ color:white; background:#e94820;}
+.jieshao:hover{ color:white; background:#e94820;}
+.ziliao:hover{ color:white; background:#e94820;}
+.zixun:hover{ color:white; background:#e94820;}
+
+.banner{ width:100%; height:360px; background-image:url(../images/my-account-number-bg.png)}
+.banner img{ display:block; height:360px; margin:0 10%;}
+
+.sheet{width:px; height:px; margin:auto; margin-top:100px;}
+.title{ width:300px; height:99px; border-bottom:1px white solid; background-color:#f3af5e; font-family:"黑体"; font-size:30px; color:#fff; line-height:100px; text-align:center;}
+.attribute{ width:822px; height:98px; border:1px #dcd9d0 solid; border-bottom:none; font-family:"黑体"; font-size:30px; color:#353535; line-height:100px; text-align:center;
+ padding-top:1px;}
+.attributeborder{ border-bottom:1px #dcd9d0 solid; }
+
+
+.Footer{ width:100%; height:130px; background-color:#e5e5e5;padding:0 7%; margin-top:80px; padding-top:50px;}
+.footerlist{ width:505px; height:14px; margin:auto;}
+.footerlist li{ float:left; margin:auto;}
+.footerlist li a{ display:block; width:100px; height:14px; border-right:1px solid black; font-family:"宋体"; font-size:14px; color:black; text-align:center; line-height:14px;}
+.footerlist li .bordernone{ border-right:none;}
+.suggestions{ font-family:"宋体"; font-size:14px; color:black; line-height:64px; text-align:center;}
+.Copyright{ font-family:"宋体"; font-size:14px; color:black; line-height:14px; text-align:center;}
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     
+     <package name="com.hengshuo.baibx.action.shop" extends="json-default" >
+      	
+
+      		
+      		<action name="giftdetail" class="giftdetailAction" method="giftdetail">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/newGiftDetail.jsp</result> 
+      		</action>
+      	
+      		<action name="giftpaypage" class="giftdetailAction" method="goPage">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/GiftSave.jsp</result> 
+      		</action>
+      		
+      		<action name="listgift" class="giftdetailAction" method="listGiftdetail">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/gift.jsp</result> 
+      		</action>
+      		
+      		<action name="houtailistgift" class="giftdetailAction" method="listGiftdetail">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/index.jsp</result> 
+      		</action>
+      		
+      		<action name="deleteAllgift" class="giftdetailAction" method="deleteAllgift">
+      		     <result name="OK" type="chain">houtailistgift</result> 
+      		</action>
+      		
+      		<action name="deleteGift" class="giftdetailAction" method="deleteGift">
+      		     <result name="OK" type="chain">houtailistgift</result> 
+      		</action>
+      		
+      		<action name="fhui" class="giftdetailAction" method="fHui">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/gift.jsp</result> 
+      		</action>
+      		
+      		<action name="goupgift" class="giftdetailAction" method="findGift">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/GiftUpdate.jsp</result> 
+      		</action>
+      		
+      		<action name="addgift" class="giftdetailAction" method="addGift">
+      		    <result name="OK" type="chain">houtailistgift</result> 
+      				
+      			
+      		      <result name="input">/adminhoutai/admin/Giftdetail/GiftSave.jsp</result>  
+      		 	 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+                <param name="allowedTypes">
+                image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg
+                </param>
+                <!-- 文件大小, 以字节为单位  1024*1021*5-->
+                <param name="maximumSize">5242880</param>
+           	 </interceptor-ref>
+          	  <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+          	  <interceptor-ref name="defaultStack" />	
+      		</action>	
+      		
+      		<action name="updategift" class="giftdetailAction" method="updateGift">
+      		    <result name="OK" type="chain">houtailistgift</result> 
+      				
+      			
+      		      <result name="input">/adminhoutai/admin/Giftdetail/GiftSave.jsp</result>  
+      		 	 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+                <param name="allowedTypes">
+                image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg
+                </param>
+                <!-- 文件大小, 以字节为单位  1024*1021*5-->
+                <param name="maximumSize">5242880</param>
+           	 </interceptor-ref>
+          	  <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+          	  <interceptor-ref name="defaultStack" />	
+      		</action>	
+      		
+      	<!-- 	<action name="order" class="payinformationAction" method="orderProduct">
+      		     <result name="OK">/PayInformation/order.jsp</result> 
+      		</action>	
+      		
+      		<action name="paylist" class="payinformationAction" method="payList">
+      		     <result name="OK">/PayInformation/list.jsp</result> 
+      		</action>	
+      		 -->
+      		
+   
+     </package>
+ </struts>

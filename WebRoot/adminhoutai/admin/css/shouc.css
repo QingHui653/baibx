@@ -1,0 +1,11 @@
+/*
+.all tr td{ border-bottom:#CCC 2px solid; padding-bottom:2%}
+.re{ width:30%; vertical-align:bottom; float:right}
+.liulang{ float:left; margin-top:5%}
+.titleimg{ width:100%}
+
+*/
+.all{ padding-top:3%; width:100%}
+.all tr td a{text-decoration:none;color:#000000; }
+.sxye tr td a{ text-decoration:none; color:#999}
+.title{border-bottom:#666666 1px solid; padding-bottom:2%; padding-top:2%}

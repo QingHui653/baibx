@@ -1,0 +1,9 @@
+
+.all{ width:100%; height:100%}
+.fkui,.tuij{ border:1px solid; width:48%; text-align:center;}
+.neir{border:1px solid;height:430px; vertical-align:text-top}
+.input{ width:99%; height:100%; border:none; overflow-y:visible;}
+.button{ padding-top:6%}
+.b{ padding-top:3%}
+
+.tijiao{text-align:center; width:70%;  height:220%; margin:auto; background:url(../../../images/bg-tijiao.png) no-repeat center; border:none;  font-size:28sp; color:#FFF; border-radius:10px}

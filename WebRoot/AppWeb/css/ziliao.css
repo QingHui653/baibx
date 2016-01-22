@@ -1,0 +1,101 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#666666; display:block;}
+.welcome a:hover{color:red;}
+.Information1024 a:hover{color:#fb8b01;}
+.fr{ float:right;}
+.fl{ float:left;}
+ul{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2{ margin:0; padding:0; font-weight:normal; font-size:100%;}
+
+.logobox{ font-family:"幼圆"; font-size:150px; color:#06cfa5; font-weight:bold;text-align:center; margin-top:50px;}
+
+.enterbox{ width:96%; padding:0 3%; margin:auto; background-color:white; margin-top:40px;}
+.enterbox h1{ font-family:"微软雅黑"; font-size:40px; color:#666666; display:block;margin-top:20px;}
+.accountbox{ width:100%; height:120px; background-image:url(../images/account.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px; margin:auto; margin-top:40px;}
+.passwordbox{ width:100%; height:120px; background-image:url(../images/password.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px;margin:auto; margin-top:40px;}
+.enterbutton{ display:block; width:96%; height:120px; background-color:#06cfa5; font-family:"黑体"; font-size:50px; color:white; text-align:center; line-height:130px; margin:auto; margin-top:70px; border-radius:20px;}
+
+
+
+.welcome{ width:94%; height:80px; background-color:#fafafa; border-bottom:1px solid #ebebeb; padding:0 3%; margin:auto;}
+.welcome div{ font-family:"宋体"; font-size:30px; color:#666666; line-height:85px;}
+
+.nav{ width:100%; height:136px;}
+.nav li{ float:left; margin:40px 0;}
+.nav li a{ font-size:35px; border-radius:10px; padding:5px 15px; margin:0 20px;}
+.shouye:hover{ color:white; background:#e94820;}
+.jieshao:hover{ color:white; background:#e94820;}
+.ziliao:hover{ color:white; background:#e94820;}
+.zixun:hover{ color:white; background:#e94820;}
+
+.banner{ width:100%; height:360px; background-image:url(../images/backbg.png);}
+.banner img{ width:100%; height:360px;}
+
+.Column{ width:100%; height:209px; background-image:url(../images/Column-bg.png);}
+.Arrow{ display:block; width:747px; height:209px; background-image:url(../images/Column-bg-center.png); background-repeat:no-repeat; background-position:center; margin:auto;}
+.centerbox{ display:block; width:747px; margin:auto; padding-top:79px;}
+.line{ width:222px; height:2px; background-color:#fb8b01;}
+.caption{ width:303px; height:56px; margin:auto;}
+.caption .number{ width:56px; height:56px; font-family:"方正粗倩简体"; font-size:60px; color:#fadd55; line-height:0px; background-image:url(../images/number-bg.png);background-position:0px -30px; background-repeat:no-repeat; margin-left:20px;}
+.caption .title{ font-family:"方正粗倩简体"; font-size:48px; color:#fb8b01; line-height:0px; margin-right:15px;}
+.photobox img{ width:96%; padding:5% 2%;}
+
+.databox{ height:680px;}
+.databox img{ width:297px; height:223px; padding:50px 10px; display:block;}
+
+.Information1024{ width:96%; height:215px; padding:25px 2%;}
+.mainleft{ width:80%; height:0px;}
+.mainleft h1 a{ width:80%; height:120px; font-family:"冬青黑体简体中文"; font-size:36px; color:#333333; font-weight:bold; line-height:60px;}
+.Slightly{ width:80%; font-family:"宋体"; font-size:26px; color:#666666; line-height:40px;}
+.recommendation{width:80px; height:24px; font-family:"宋体"; font-size:40px; color:white; background-image:url(../images/recommendation-bg.png); line-height:24px;}
+.mainright{ width:360px; height:px;}
+.imgnews1, .imgnews2{ margin:auto; margin-bottom:10px;}
+
+.newlist{ width:96%; height:320px; margin-top:50px; border-top:1px dotted black; padding-top:30px; margin:auto;}
+.newlist li{ width:450px; height:50px;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.newlist li a{ display:block; width:450px; font-family:"宋体"; font-size:30px; color:#666666; line-height:50px;}
+.newlist li span{ float:right; font-family:"宋体"; font-size:30px; color:#666666; line-height:50px; margin-left:20px;}
+
+.banner{ width:100%; height:360px; background-image:url(../images/introductionbackbg.png);}
+.banner img{ width:100%; height:360px;}
+
+.titlebox{height:250px; margin-top:30px; margin:auto;}
+.firstline{ font-family:"幼圆"; font-size:48px; color:#12b7f5; text-align:center; margin-top:30px;}
+.secondline{ font-family:"幼圆"; font-size:48px; color:#343434; text-align:center; margin-top:30px;}
+.thirdline{ font-family:"幼圆"; font-size:48px; color:#f74a28; text-align:center; margin-top:30px;}
+
+.download{ width:385px; height:75px; border-radius:50px; background-color:#17bdfb; text-align:center; margin:auto;}
+.download a{ font-family:"幼圆"; font-size:36px; color:white; line-height:75px;}
+
+.demonstration img{ width:96%; padding:5% 2%;}
+.insurance-product img{ width:96%; padding:5% 2%;}
+.client-group img{ width:96%; padding:5% 2%;}
+.box-home img{ width:96%; padding:5% 2%;}
+
+
+.banner{ width:100%; height:360px; background-image:url(../images/introductionbackbg.png);}
+.banner img{ width:100%; height:360px;}
+
+.sheet{width:96%; margin:auto; margin-top:50px; margin-bottom:50px;}
+.sheet .title{ width:50%; border-bottom:1px white solid; background-color:#f3af5e; font-family:"黑体"; font-size:30px; color:#fff; line-height:100px; text-align:center;}
+.attribute{ width:149%; height:px; border:1px #dcd9d0 solid; border-bottom:none; font-family:"黑体"; font-size:30px; color:#353535; line-height:100px; text-align:center;
+ padding-top:1px;}
+.attributeborder{ border-bottom:1px #dcd9d0 solid; }
+
+
+
+.Footer{ width:100%; height:px; background-color:#e5e5e5; margin-top:20px; padding-top:50px;}
+.footerlist{ width:72%; height:30px; margin:auto;}
+.footerlist li{ float:left; margin:auto;}
+.footerlist li a{ display:block; width:140px; height:14px; border-right:1px solid black; font-family:"宋体"; font-size:25px; color:black; text-align:center; line-height:14px;}
+.footerlist li .bordernone{ border-right:none;}
+.suggestions{ font-family:"宋体"; font-size:25px; color:black; line-height:64px; text-align:center;}
+.Copyright{ width:94%; font-family:"宋体"; font-size:25px; color:black; line-height:40px; text-align:center; margin:auto;}
+
+.aaaa{text-align: center; padding-left:0%}
+.co{ padding-left:50px; padding-right:50px;}
+.aaaa tr td{ padding-bottom:30px;font-size: 23px;}
+.title{ padding-top:10px;}

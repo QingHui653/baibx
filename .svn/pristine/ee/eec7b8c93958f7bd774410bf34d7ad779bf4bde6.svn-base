@@ -1,0 +1,41 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.pay" extends="json-default">
+      	
+  <!-- 
+      		<action name="usJsonLogin" class="productAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		 -->
+      	
+      		<action name="paypage" class="payinformationAction" method="payPage">
+      		     <result name="OK">/PayInformation/a.jsp</result> 
+      		</action>	
+      		
+      		<action name="order" class="payinformationAction" method="orderProduct">
+      		     <result name="OK">/PayInformation/or.jsp</result> 
+      		</action>	
+      		
+      		<action name="paylist" class="payinformationAction" method="payList">
+      		     <result name="OK">/PayInformation/list.jsp</result> 
+      		</action>	
+      		
+      		<action name="querenzf" class="payinformationAction" method="paySuccess">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="paySAll" class="payinformationAction" method="paySuccessAll">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="youwudd" class="payinformationAction" method="youwu">
+      		     <result name="OK" type="chain">paypage</result> 
+      		</action>
+      		
+      		
+   
+     </package>
+ </struts>

@@ -1,0 +1,45 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.group.invitation" extends="json-default">
+      	
+  <!-- 
+      		<action name="usJsonLogin" class="productAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		 -->
+      	<action name="huashulist" class="invitationAction" method="huaShuList">
+      		     <result name="OK" type="json"></result> 
+      		</action> 
+      	
+      	 <action name="huashudetail" class="invitationAction" method="huaShuDetail">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      	<action name="addhuashu"  class="invitationAction" method="addHuaShua">
+      		     <result name="OK"  type="json"></result> 
+      	</action>
+      	<!-- IOS添加 -->
+      	<action name="addJsonHuaShu"  class="invitationAction" method="addJsonHuaShua">
+      		     <result name="OK"  type="json"></result> 
+      	</action>
+      		
+      		<action name="deletehuashu" class="invitationAction" method="deleteHuaShu">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      	
+      		<action name="huashu" class="invitationAction" method="detail">
+      		     <result name="OK"> /adminhoutai/admin/huashu/Detail.jsp</result> 
+      		</action> 
+      		
+      		<action name="updateHuaShu" class="invitationAction" method="updateHuaShu">
+      		     <result name="OK"> /adminhoutai/admin/huashu/Detail.jsp</result> 
+      		</action> 	
+      		
+      		
+   
+     </package>
+ </struts>

@@ -1,0 +1,132 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#666666; display:block;}
+.welcome a:hover{color:red;}
+.Information1024 a:hover{color:#fb8b01;}
+.fr{ float:right;}
+.fl{ float:left;}
+ul{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2{ margin:0; padding:0; font-weight:normal; font-size:100%;}
+
+.welcome{ width:100%; height:33px; background-color:#fafafa; border-bottom:1px solid #ebebeb;}
+.center1024{ width:1024px; margin:auto;}
+.welcome div{ font-family:"宋体"; font-size:12px; color:#666666; line-height:32px;}
+.Telephone{ margin-right:30px;}
+/*首页始*/
+.nav{ width:1024px; height:112px; margin:auto;}
+.nav li{ float:left; margin:40px 0;}
+.nav li a{ width:px; height:px; border-radius:3px; padding:5px 15px; margin:0 20px;}
+.shouye:hover{ color:white; background:#e94820;}
+.jieshao:hover{ color:white; background:#e94820;}
+.ziliao:hover{ color:white; background:#e94820;}
+.zixun:hover{ color:white; background:#e94820;}
+
+.index-banner{ width:100%; height:360px; background-image:url(../images/backbg.png);}
+.index-banner img{ display:block; width:1024px; height:360px; margin:auto;}
+
+.Column{ width:100%; height:209px; background-image:url(../images/Column-bg.png);}
+.Arrow{ display:block; width:747px; height:209px; background-image:url(../images/Column-bg-center.png); background-repeat:no-repeat; background-position:center; margin:auto;}
+.centerbox{ display:block; width:747px; height:px; margin:auto; padding-top:79px;}
+.line{ width:222px; height:2px; background-color:#fb8b01;}
+.caption{ width:303px; height:56px; margin:auto;}
+.caption .number{ width:56px; height:56px; font-family:"方正粗倩简体"; font-size:60px; color:#fadd55; line-height:0px; background-image:url(../images/number-bg.png);background-position:0px -30px; background-repeat:no-repeat; margin-left:20px;}
+.caption .title{ font-family:"方正粗倩简体"; font-size:48px; color:#fb8b01; line-height:0px; margin-right:15px;}
+.photobox{ width:1024px; height:640px; padding-top:25px; margin:auto; margin-bottom:35px;}
+
+.databox{ width:1024px; height:551px; padding-top:25px; margin:auto;}
+.img1, .img4{ margin-bottom:20px;}
+.img2, .img5{ margin-left:17px; margin-bottom:20px;}
+.img3, .img6{ margin-bottom:20px;}
+
+.Information1024{ width:1024px; height:365px; margin:auto; padding-top:25px;}
+.mainright{ width:360px; height:px;}
+.imgnews1, .imgnews2{ margin:auto; margin-bottom:10px; margin-right:20px;}
+.mainleft h1 a{ width:664px; height:22px; font-family:"冬青黑体简体中文"; font-size:22px; color:#333333; font-weight:bold; line-height:26px;}
+.recommendation{width:80px; height:24px; font-family:"宋体"; font-size:14px; color:white; background-image:url(../images/recommendation-bg.png); line-height:24px;}
+.Slightly{ font-family:"宋体"; font-size:14px; color:#666666; line-height:70px;}
+.newlist{ width:664px; height:px; margin-top:73px; border-top:1px dotted #999999; padding-top:17px;}
+.newlist li{ width:320px; height:32px; overflow:hidden;}
+.newlist li span{ float:right; font-family:"宋体"; font-size:12px; color:#666666; line-height:32px;}
+.newlist li a{ font-family:"宋体"; font-size:12px; color:#666666; line-height:32px;}
+/*首页末*/
+
+/*登录始*/
+.logobox{ width:1024px; height:136px; margin:auto;}
+.leftlogo{ font-family:"幼圆"; font-size:40px; color:#06cfa5; font-weight:bold; line-height:136px;}
+
+.bannerbox{ width:100%; height:467px; background-image:url(../images/banner-bg.png);}
+.box1024{ width:1024px; margin:auto;}
+.enterbox{ width:300px; height:350px; background-color:white; margin-top:40px;}
+.enterbox h1{ font-family:"微软雅黑"; font-size:20px; color:#666666; display:block; margin-left:20px; margin-top:20px;}
+.accountbox{ width:258px; height:40px; background-image:url(../images/account.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px; margin-left:20px; margin-top:28px;}
+.textbox input{ width:215px; height:34px; margin-bottom:5px; border:none; font-family:"幼圆"; font-size:20px; color:black;}
+.passwordbox{ width:258px; height:40px; background-image:url(../images/password.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px; margin-left:20px; margin-top:28px;}
+.enterbutton{ display:block; width:258px; height:42px; background-image:url(../images/enter-bg.png); font-family:"黑体"; font-size:20px; color:white; text-align:center; line-height:42px; margin:auto; margin-top:70px;}
+/*登录末*/
+
+/*介绍始*/
+.jieshao-banner{ width:100%; height:360px; background-image:url(../images/introductionbackbg.png)}
+.jieshao-banner img{ display:block; width:1024px; height:360px; margin:auto;}
+
+.titlebox{ width:1024px; height:250px; margin-top:30px; margin:auto;}
+.firstline{ font-family:"幼圆"; font-size:48px; color:#12b7f5; text-align:center; margin-top:30px;}
+.secondline{ font-family:"幼圆"; font-size:48px; color:#343434; text-align:center; margin-top:30px;}
+.thirdline{ font-family:"幼圆"; font-size:48px; color:#f74a28; text-align:center; margin-top:30px;}
+
+.demonstration{ width:1024px; height:639px; margin:auto;}
+.insurance-product{ width:1024px; height:778px; margin:auto;}
+.client-group{ width:1024px; height:513px; margin:auto;}
+.box-home{ width:1024px; height:728px; margin:auto;}
+.download{ width:385px; height:75px; border-radius:50px; background-color:#17bdfb; text-align:center; margin:auto;}
+.download a{ font-family:"幼圆"; font-size:36px; color:white; line-height:75px;}
+/*介绍末*/
+
+/*我的帐号始*/
+.myaccount-banner{ width:100%; height:360px; background-image:url(../images/my-account-number-bg.png)}
+.myaccount-banner img{ display:block; width:1024px; height:360px; margin:auto;}
+
+.sheet{width:px; height:px; margin:auto; margin-top:100px;}
+.sheet .title{ width:300px; height:99px; border-bottom:1px white solid; background-color:#f3af5e; font-family:"黑体"; font-size:30px; color:#fff; line-height:100px; text-align:center;}
+.attribute{ width:822px; height:98px; border:1px #dcd9d0 solid; border-bottom:none; font-family:"黑体"; font-size:30px; color:#353535; line-height:100px; text-align:center;
+ padding-top:1px;}
+.attributeborder{ border-bottom:1px #dcd9d0 solid; }
+/*我的帐号末*/
+
+/*关于始*/
+.help-list{display: table;width: 1000px;margin-right: auto;margin-left: auto;margin-bottom: 60px;}
+.lcjs{ background-color: #FFFFFF;height: 114px;width: 998px;margin-right: auto;margin-left: auto;}
+.list_l{float: left;width: 200px;margin-right: 42px;}
+.list_r{float: left;width: 756px;border: 1px solid #dadada;min-height: 400px;color: #666;font-size: 14px;line-height: 35px;text-align: center;}
+.list_l li{height: 48px;width: 200px;text-align: center;line-height: 48px;font-size: 14px;color: #FFF;margin-bottom: 2px;}
+.list_l li a{background-color: #deeace;display: block;height: 48px;width: 200px;color: #666;}
+#list_bt{background-color: #99cc33;font-size: 18px;}
+.list_l li a:hover{background-color: #F90;color: #FFF;}
+.help{text-align: left;width: 680px;margin-right: auto;margin-left: auto;margin-top: 30px;margin-bottom: 40px;}
+.list_bt a{color: #666666;text-decoration: none; outline: none;}
+.list_bt a:hover{color: #F90;}
+
+/*关于末*/
+
+/*建议反馈始*/
+
+.popelbox{ width:1024px; padding:20px 0 20px 0; border-bottom:1px solid #d2d2d2; border-top:1px solid #d2d2d2; height:100px; margin:auto;}
+.bighead{ width:80px; height:80px;}
+.popelbox img{ width:100%; border-radius:10px;}
+.xmxb{ padding-left:24px; width:920px;}
+.xingming{ font-size:16px; color:black;}
+.xingbie{ width:920px; height:40px; font-size:12px; color:#666; line-height:20px; margin-top:20px; overflow:hidden;}
+.riqi{ font-size:12px; color:black;}
+
+.jianyibox{ width:100%; height:200px; background-color:#ff9900; background-image:url(../images/jianyisj.png); background-repeat:no-repeat; background-position:center 0; margin-top:50px;}
+/*建议反馈末*/
+
+.Footer{ width:100%; height:130px; background-color:#e5e5e5; margin-top:80px; padding-top:50px;}
+.footerlist{ width:27%; height:14px; margin:auto;}
+.footerlist li{ float:left; margin:auto;}
+.footerlist li a{ display:block; width:100px; height:14px; border-right:1px solid black; font-family:"宋体"; font-size:14px; color:black; text-align:center; line-height:14px;}
+.footerlist li .bordernone{ border-right:none;}
+.suggestions{ font-family:"宋体"; font-size:14px; color:black; line-height:64px; text-align:center;}
+.Copyright{ font-family:"宋体"; font-size:14px; color:black; line-height:14px; text-align:center;}
+

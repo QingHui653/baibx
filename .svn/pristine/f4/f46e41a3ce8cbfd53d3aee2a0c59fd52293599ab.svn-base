@@ -1,0 +1,74 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.group" extends="json-default">
+      	
+  <!-- 
+      		<action name="usJsonLogin" class="productAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		 -->
+      		 	<action name="beifen" class="groupuserAction" method="allGroupByUserid">
+      		      <result name="OK" type="json"></result> 
+      		</action>
+      		 
+      		 
+      		 <action name="deletegroup" class="groupuserAction" method="deleteGroup">
+      		      <result name="OK" type="chain">Customergroup</result> 
+      		</action>
+      		
+      		<action name="deleteallgroup" class="groupuserAction" method="deleteAllgroup">
+      		      <result name="OK" type="chain">Customergroup</result> 
+      		</action>
+      		 
+      		 
+      		<action name="Customergroup" class="groupuserAction" method="group">
+      		      <result name="OK">/adminhoutai/admin/huashu/Customerlist.jsp</result> 
+      		</action>
+      			<action name="Increasegroup" class="groupuserAction" method="group">
+      		      <result name="OK">/adminhoutai/admin/huashu/Increaselist.jsp</result> 
+      		</action>
+      		
+      		<action name="Peergroup" class="groupuserAction" method="group">
+      		      <result name="OK">/adminhoutai/admin/huashu/Peerlist.jsp</result> 
+      		</action>
+      		
+      		
+      		<action name="deletegroupuser" class="groupuserAction" method="deleteGroupUser">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+       	
+      		<action name="updategroupuser" class="groupuserAction" method="updateGroupUser">
+      		     <result name="OK" type="json"></result> 
+      		</action> 
+      		
+      		<action name="groupuserDetail" class="groupuserAction" method="findGroupUser">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="findgroups" class="groupuserAction" method="findListGroupUser">
+      		      <result name="OK" type="json"></result> 
+      		</action> 
+      		
+      		<action name="addGroup" class="groupuserAction" method="addGroupUser">
+      		      <result name="OK" type="json"></result> 
+      		</action>
+      		
+      			
+      		<action name="allGroup" class="groupuserAction" method="addGroupUser">
+      		      <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="addgroups" class="groupuserAction" method="addJsonGroup">
+      		      <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="UPDATE" class="groupuserAction" method="update">
+      		      <result name="OK" type="json"></result> 
+      		</action>
+      		
+     </package>
+ </struts>

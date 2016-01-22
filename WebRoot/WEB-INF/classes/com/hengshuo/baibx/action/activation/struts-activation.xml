@@ -1,0 +1,24 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     <package name="com.hengshuo.baibx.action.activation" extends="json-default">
+ 
+     	<action name="aclist" class="activationAction" method="list">
+      		    <result name="OK">/adminhoutai/admin/activation/index.jsp</result>  
+      		</action>
+      		
+      		<action name="acadd" class="activationAction" method="add">
+      		    <result name="OK" type="chain">aclist</result>  
+      		</action>
+      		
+      		<action name="acdelete" class="activationAction" method="delete">
+      		    <result name="OK" type="chain">aclist</result>  
+      		</action>
+      		
+      		<action name="acdeleteall" class="activationAction" method="deleteAll">
+      		    <result name="OK" type="chain">aclist</result>  
+      		</action>
+     
+     </package>
+ </struts>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"><!-- 数据源类采用JDBC数据源 -->
+		<property name="driverClassName">
+			<!-- 将数据库连接交给了proxool管理,使它的驱动 -->
+			<value>org.logicalcobwebs.proxool.ProxoolDriver</value>
+		</property>
+		<property name="url">
+			<!-- 数据库连接池的别名,与proxool.xml中的Alias必须一致 -->
+			<value>proxool.DBPool</value>
+		</property>
+	</bean> 
+	<!--dataSource end -->
+	<!-- sessionfactory wjhlangzi scope="singleton" 只有一个实例存在-->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean"
+		scope="singleton">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="cache.provider_class">
+					org.hibernate.cache.EhCacheProvider
+				</prop>
+				<prop key="hibernate.connection.provider_class">
+					org.hibernate.connection.ProxoolConnectionProvider
+				</prop>
+				<prop key="hibernate.connection.autocommit">true</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.dialect">
+				<!-- org.hibernate.dialect.MySQL5InnoDBDialect -->
+					com.hengshuo.baibx.common.util.CustomDialect
+					<!-- org.hibernate.dialect.MySQLDialect -->
+				</prop><!--
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.Oracle9Dialect
+				</prop>
+				--><!--   wjhlangzi
+					此处要注意因为proxool自己释放数据库连接比慢,所以要在此给出释放连接的模式
+					
+					<prop key="hibernate.connection.release_mode">
+					after_statement
+					</prop>  -->
+				<!--   二级缓存     start         -->
+				<prop key="hibernate.cache.use_second_level_cache">
+					true
+				</prop>
+				<prop key="hibernate.cache.provider_class">
+					org.hibernate.cache.EhCacheProvider
+				</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.configurationResourceName">
+					ehcache.xml
+				</prop>
+				<!--   二级缓存  end     wjhlangzi      -->
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/hengshuo/baibx/model/Admin.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/News.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Userb.hbm.xml
+				</value>
+				
+				<value>
+					com/hengshuo/baibx/model/Product.hbm.xml
+				</value>
+				
+				<value>
+					com/hengshuo/baibx/model/Uprelation.hbm.xml
+				</value>
+				
+				<value>
+					com/hengshuo/baibx/model/Payinformation.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Groupuser.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Invitation.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Information.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Collection.hbm.xml
+				</value>
+				
+				<value>
+					com/hengshuo/baibx/model/Feedback.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Giftdetail.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Orderb.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Orderdetail.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Activation.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Edition.hbm.xml
+				</value>
+				<value>
+					com/hengshuo/baibx/model/Flag.hbm.xml
+				</value>
+				
+				
+				
+			<!-- 	<value>
+					com/hengshuo/study/model/bbs/Friends.hbm.xml
+				</value> -->
+			
+				
+			</list>
+
+		</property>
+
+	</bean>
+
+
+	
+	<!-- 事务处理开始 -->
+	<!-- 定义事务类型 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<!-- 定义拦载器 -->
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="upd*">
+					PROPAGATION_REQUIRED,timeout_50,-Exception
+				</prop>
+				<prop key="del*">PROPAGATION_REQUIRED,-Exception</prop>
+				<prop key="save*">PROPAGATION_REQUIRED,-Exception</prop>
+
+				<prop key="find*">
+					PROPAGATION_SUPPORTS,readOnly,-Exception
+				</prop>
+				<prop key="load*">
+					PROPAGATION_SUPPORTS,readOnly,-Exception
+				</prop>
+				<prop key="get*">
+					PROPAGATION_SUPPORTS,readOnly,-Exception
+				</prop>
+				<!-- 需改成无事物 -->
+				<prop key="*">PROPAGATION_NEVER,readOnly</prop>
+
+				<!--
+					避免可重复读-->
+				<prop key="rupd*">
+					PROPAGATION_REQUIRED,ISOLATION_REPEATABLE_READ,-Exception
+				</prop>
+				<prop key="rdel*">
+					PROPAGATION_REQUIRED,ISOLATION_REPEATABLE_READ,-Exception
+				</prop>
+				<prop key="rsave*">
+					PROPAGATION_REQUIRED,ISOLATION_REPEATABLE_READ,-Exception
+				</prop>
+				<!--  避免幻读-->
+				<prop key="supd*">
+					PROPAGATION_REQUIRED,ISOLATION_SERIALIZABLE,-Exception
+				</prop>
+				<prop key="sdel*">
+					PROPAGATION_REQUIRED,ISOLATION_SERIALIZABLE,-Exception
+				</prop>
+				<prop key="ssave*">
+					PROPAGATION_REQUIRED,ISOLATION_SERIALIZABLE,-Exception
+				</prop>
+
+			</props>
+		</property>
+	</bean>
+
+	<!-- 定义bean别名自动代理创造器-->
+	<bean id="autoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="proxyTargetClass">
+			<value>true</value>
+		</property>
+		<!--
+			<property name="taget-prent-class"><value>false</value></property>
+		-->
+		<property name="interceptorNames">
+			<value>transactionInterceptor</value>
+		</property>
+		<property name="beanNames">
+			<list>
+			<idref bean="adminServiceI"/>
+			<idref bean="newsServiceI"/>
+			<idref bean="userbServiceI"/>
+			<idref bean="uprelationServiceI"/>
+			<idref bean="productServiceI"/>
+			<idref bean="payinformationServiceI"/>
+			<idref bean="groupuserServiceI"/>	
+			<idref bean="informationServiceI"/>		
+			<idref bean="collectionServiceI"/>
+			<idref bean="feedbackServiceI"/>
+			<idref bean="giftdetailServiceI"/>	
+			<idref bean="orderbServiceI"/>	
+			<idref bean="orderdetailServiceI"/>		
+			<idref bean="activationServiceI"/>
+			<idref bean="editionServiceI"/>
+			<idref bean="flagServiceI"/>
+			
+			
+				<!-- <idref bean="Sys_SystemService" />
+				
+
+				  <idref local="FenleiDAO"/>
+				<idref bean="TestcacheService" /> -->
+			</list>
+		</property> 
+	</bean>
+
+	<!-- 事务处理结束 -->
+
+	<!-- dao层 -->
+			  	
+	<bean id="BaseDao" class="com.hengshuo.baibx.dao.impl.BaseDao_I">
+
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<!-- model层 -->
+	<bean id="admin"  class="com.hengshuo.baibx.model.Admin"></bean>
+	<bean id="news" class="com.hengshuo.baibx.model.News"></bean>
+	<bean id="userb" class="com.hengshuo.baibx.model.Userb"></bean>
+	<bean id="product" class="com.hengshuo.baibx.model.Product"></bean>
+	<bean id="uprelation" class="com.hengshuo.baibx.model.Uprelation"></bean>
+	<bean id="payinformation" class="com.hengshuo.baibx.model.Payinformation"></bean>
+	<bean id="groupuser" class="com.hengshuo.baibx.model.Groupuser"></bean>
+	<bean id="invitation" class="com.hengshuo.baibx.model.Invitation"></bean>
+	<bean id="information" class="com.hengshuo.baibx.model.Information"></bean>
+	<bean id="collection" class="com.hengshuo.baibx.model.Collection"></bean>
+	<bean id="feedback" class="com.hengshuo.baibx.model.Feedback"></bean>
+	<bean id="giftdetail" class="com.hengshuo.baibx.model.Giftdetail"></bean>
+	<bean id="orderb" class="com.hengshuo.baibx.model.Orderb"></bean>
+	<bean id="orderdetail" class="com.hengshuo.baibx.model.Orderdetail"></bean>
+	<bean id="activation" class="com.hengshuo.baibx.model.Activation"></bean>
+	<bean id="edition" class="com.hengshuo.baibx.model.Edition"></bean>
+	<bean id="flag" class="com.hengshuo.baibx.model.Flag"></bean>
+</beans>

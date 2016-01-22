@@ -1,0 +1,62 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="server"></constant>
+	<constant name="objectFactory" value="spring"></constant>
+	<include file="struts-default.xml" />
+		<include file="com/hengshuo/baibx/action/admin/struts-admin.xml" />
+		
+		<include file="com/hengshuo/baibx/action/userb/struts-userb.xml" /> 
+		
+		<include file="com/hengshuo/baibx/action/news/struts-news.xml" /> 
+		
+		<include file="com/hengshuo/baibx/action/userproduct/struts-uprelation.xml" />
+		 
+		  <include file="com/hengshuo/baibx/action/pay/struts-Payinformation.xml" />
+		  
+		<include file="com/hengshuo/baibx/action/group/struts-Groupuser.xml" />
+		 
+		 	<include file="com/hengshuo/baibx/action/group/struts-Groupuser.xml" />
+		 	
+		 		<include file="com/hengshuo/baibx/action/group/struts-Invitation.xml" />
+		 	
+		 <include file="com/hengshuo/baibx/action/study/struts-information.xml" />
+   
+   <include file="com/hengshuo/baibx/action/collection/struts-collection.xml" />
+   
+   <include file="com/hengshuo/baibx/action/feedback/struts-Feedback.xml" />
+   
+    <include file="com/hengshuo/baibx/action/shop/struts-Giftdetail.xml" />
+   <include file="com/hengshuo/baibx/action/shop/struts-Orderb.xml" />
+   
+    <include file="com/hengshuo/baibx/action/activation/struts-activation.xml" />
+   
+   <include file="com/hengshuo/baibx/action/edition/struts-edition.xml" />
+   
+   
+   <include file="com/hengshuo/baibx/action/yanshi/struts-Yanshi.xml" />
+   
+   
+   
+   
+   <!--  <include file="com/hengshuo/baibx/action/bbs/struts-userlogin.xml" /> 
+    <include file="com/hengshuo/baibx/action/bbs/struts-topics.xml" />  -->
+    
+
+   
+	
+
+</struts>
+
+
+<!--<struts> 
+     <include file="cn/test/struts-test.xml" /> 
+    <package name="default" extends="struts-default"> 
+       <action name="TestS" class="cn.test.TestS">
+             <result name="s">/test.jsp</result>
+        </action>
+          
+    </package>   
+</struts>
+-->

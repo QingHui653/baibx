@@ -1,0 +1,10 @@
+/* CSS Document */
+
+.table{  background-color:#F2F2F2}
+/*.table tr td img{ width:700px;}*/
+.title{text-align:center;font-size: 28px; color: red;}
+.table tr td{padding-top:15px}
+.im{width:700px;}
+.fe{width:90px; background-color:orange; text-align: center; height: 30px;padding-top: 15px;}
+.a{ text-decoration: none ;color:black;}
+

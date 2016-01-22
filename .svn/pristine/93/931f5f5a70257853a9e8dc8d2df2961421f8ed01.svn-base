@@ -1,0 +1,6 @@
+.all{ padding-top:0%; width:100%; text-align:center; background-color:#92D050}
+.all td { background-color:#F7BA00; padding-top:2%; padding-bottom:2%; border:#FFFFFF 5px solid}
+.all a{text-decoration:none;color:#000000; }
+
+
+

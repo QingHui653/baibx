@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#666666; display:block;}
+.welcome a:hover{color:red;}
+.Information1024 a:hover{color:#fb8b01;}
+.fr{ float:right;}
+.fl{ float:left;}
+ul{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2{ margin:0; padding:0; font-weight:normal; font-size:100%;}
+
+.logobox{ width:1024px; height:136px; margin:auto;}
+.leftlogo{ font-family:"幼圆"; font-size:40px; color:#06cfa5; font-weight:bold; line-height:136px;}
+
+.bannerbox{ width:100%; height:467px; background-image:url(../images/banner-bg.png);}
+.box1024{ width:1024px; margin:auto;}
+.enterbox{ width:300px; height:350px; background-color:white; margin-top:40px;}
+.enterbox h1{ font-family:"微软雅黑"; font-size:20px; color:#666666; display:block; margin-left:20px; margin-top:20px;}
+.accountbox{ width:258px; height:40px; background-image:url(../images/account.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px; margin-left:20px; margin-top:28px;}
+.textbox input{ width:215px; height:34px; margin-bottom:5px; border:none; font-family:"幼圆"; font-size:20px; color:black;}
+.passwordbox{ width:258px; height:40px; background-image:url(../images/password.png); background-repeat:no-repeat; border:1px solid #bdbdbd;border-radius:5px; margin-left:20px; margin-top:28px;}
+.enterbutton{ display:block; width:258px; height:42px; background-image:url(../images/enter-bg.png); font-family:"黑体"; font-size:20px; color:white; text-align:center; line-height:42px; margin:auto; margin-top:70px;}
+
+
+
+
+.Footer{ width:100%; height:130px; background-color:#e5e5e5; margin-top:80px; padding-top:50px;}
+.footerlist{ width:505px; height:14px; margin:auto;}
+.footerlist li{ float:left; margin:auto;}
+.footerlist li a{ display:block; width:100px; height:14px; border-right:1px solid black; font-family:"宋体"; font-size:14px; color:black; text-align:center; line-height:14px;}
+.footerlist li .bordernone{ border-right:none;}
+.suggestions{ font-family:"宋体"; font-size:14px; color:black; line-height:64px; text-align:center;}
+.Copyright{ font-family:"宋体"; font-size:14px; color:black; line-height:14px; text-align:center;}
+
+

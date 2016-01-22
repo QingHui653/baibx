@@ -1,0 +1,122 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+      <constant name="struts.custom.i18n.resources" value="messageResource"/>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.multipart.maxSize" value="120000000"/>
+     
+     <package name="com.hengshuo.baibx.action.study" extends="json-default">
+      	
+      
+      		<action name="index" class="informationAction" method="news">
+      		  <result name="ok">/web/bbx/index.jsp</result>  					
+      		</action>
+      		<action name="appindex" class="informationAction" method="news">
+      		  <result name="ok">/AppWeb/index.jsp</result>  					
+      		</action>
+      		<action name="apstudyslist" class="informationAction" method="findZiLiaoList">
+      		     <result name="OK"> /AppWeb/studylist.jsp</result> 
+      		</action>
+      		
+      		<action name="apstudyDetail" class="informationAction" method="studyDetail">
+      		  <result name="OK">/AppWeb/studydetail.jsp</result>  					
+      		</action>
+      		
+      		<action name="studyDetail" class="informationAction" method="studyDetail">
+      		  <result name="OK">/web/bbx/studydetail.jsp</result>  					
+      		</action>
+      		
+      	<!-- 	
+      		<action name="studyjson" class="informationAction" method="ziLiaoListJson">
+      		  <result name="OK" type="json"></result>  
+      		</action> -->
+      		<!-- 移动 -->
+      		<action name="studylist" class="informationAction" method="findZiLiaoList">
+      		     <result name="OK"> /adminhoutai/admin/Information/videoall.jsp</result> 
+      		</action>
+      		
+      		<action name="studymohufind" class="informationAction" method="moHuFind">
+      		     <result name="OK"> /adminhoutai/admin/Information/videoall.jsp</result> 
+      		</action>
+      		
+      		
+      		
+      			<!-- 网页 -->
+      		<action name="studyslist" class="informationAction" method="findZiLiaoList">
+      		     <result name="OK"> /web/bbx/studylist.jsp</result> 
+      		</action>
+      		<!-- 后台 -->
+      		<action name="typelist" class="informationAction" method="findZiLiaoList">
+      		     <result name="OK"> /adminhoutai/admin/Information/typelist.jsp</result> 
+      		</action>
+      		
+      		<!-- 删除 -->
+      		<action name="deleteStudy" class="informationAction" method="deleteStudy">
+      		     <result name="OK" type="chain">typelist</result> 
+      		</action>
+      		
+      		<!-- 批量删除 -->
+      		<action name="deleteAllStudy" class="informationAction" method="deleteAllstudy">
+      		     <result name="OK" type="chain">typelist</result> 
+      		</action>
+      		<!-- 资料修改页面 -->
+      		<action name="StudyUpdatePage" class="informationAction" method="studyDetailPage">
+      		      <result name="OK"> /adminhoutai/admin/Information/StudyUpdate.jsp</result> 
+      		</action>
+      		
+      		
+      		
+      		<action name="studydeatil" class="informationAction" method="findZiLiaoDetail">
+      		     <result name="OK"> /adminhoutai/admin/Information/Detail.jsp</result> 
+      		</action>
+      		
+      		<action name="study" class="informationAction" method="uploadPage">
+      		     <result name="OK"> /adminhoutai/admin/Information/StudySavess.jsp</result> 
+      		</action>
+      		
+      		
+      		<!-- 修改 -->
+      			<action name="updatestudy" class="informationAction" method="updateStudy">
+      		    
+      		      <result name="input">/adminhoutai/admin/Information/StudyUpdate.jsp</result>  
+      		 	 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+               <!-- 文件大小, 以字节为单位 -->
+               <param name="maximumSize">120000000</param>
+           	 </interceptor-ref>
+          	  <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+          	  <interceptor-ref name="defaultStack" />
+      		      <result name="OK" type="chain">typelist</result>      
+      		</action>
+      	
+      		
+      
+      		<action name="upload" class="informationAction" method="fileUpload">
+      		    
+      		      <result name="input">/adminhoutai/admin/Information/StudySavess.jsp</result>  
+      		 	 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+               <!-- 文件大小, 以字节为单位 -->
+               <param name="maximumSize">120000000</param>
+           	 </interceptor-ref>
+          	  <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+          	  <interceptor-ref name="defaultStack" />
+      		      <result name="OK" type="chain">typelist</result>      
+      		</action>
+      	
+      	
+      	<action name="downloadss" class="informationAction" method="downloadFile"> 
+      		<result name="OK" type="stream"> 
+      		<param name="contentType">application/octet-stream</param> 
+       		<param name="contentDisposition">attachment;filename="${fileFileName}"</param> 
+      		<param name="inputName">downloadFile</param>
+      		  <!-- 下载文件的缓冲大小 -->  
+      		  <param  name="bufferSize">4096</param> 
+      		 </result> 
+      	</action>
+      	
+      	
+        
+     </package>
+ </struts>

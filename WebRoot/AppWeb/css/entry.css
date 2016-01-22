@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#666666; display:block;}
+.welcome a:hover{color:red;}
+.Information1024 a:hover{color:#fb8b01;}
+.fr{ float:right;}
+.fl{ float:left;}
+ul{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2{ margin:0; padding:0; font-weight:normal; font-size:100%;}
+
+.logobox{ width:70%; height:200px; padding:0 30%;}
+.leftlogo{ font-family:"幼圆"; font-size:120px; color:#06cfa5; font-weight:bold; line-height:200px;}
+
+.enterbox{ width:100%; height:350px; background-color:white; margin-top:40px; }
+.enterbox h1{ font-family:"微软雅黑"; font-size:60px; color:#666666; display:block; margin-top:20px; margin-left:5%;}
+.accountbox{ width:90%; height:120px;  border:1px solid #bdbdbd;border-radius:20px;  margin-top:10%; position: absolute ; top: 20%; left: 5%;}
+.passwordbox{ width:90%; height:120px;  border:1px solid #bdbdbd;border-radius:20px;   margin-top:10%; position: absolute ; top: 35%; left: 5%;}
+
+.enterbutton{ width:90%; height:120px; border-radius:20px; margin-top:15%; background-color:#06cfa5; font-family:"黑体"; font-size:60px; color:white; text-align:center; line-height:120px;  position: absolute ; top: 50%; left: 5%;}
+
+.input{ width:80%; height:110px; margin-bottom:5px; border:none; font-family:"幼圆"; font-size:20px; color:black; font-size: 60px}

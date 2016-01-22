@@ -1,0 +1,149 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+   <constant name="struts.custom.i18n.resources" value="messageResource"/>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.multipart.maxSize" value="1024102400"/>
+   
+     <package name="com.hengshuo.baibx.action.news.NewsAction"    extends="json-default">
+ 		
+      
+        <!-- 
+        	<global-results>
+    		<result name="error">/error.jsp</result>
+    	</global-results>
+    	
+		 <global-exception-mappings>
+    		<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+    	</global-exception-mappings>
+         -->
+   		
+     
+     
+         <!-- 	<action name="testsave" class="testaction" method="SaveOrupdate">
+      		  <result name="OK">/test.jsp</result> 
+      		   <result type="chain" name="OK">testfind</result> 
+      		</action> -->
+      		
+      	<!-- 	<action name="testlogin" class="testaction" method="testlogin">
+      		  <result name="OK">/test.jsp</result>  
+      		   <result type="chain" name="OK">testfind</result>
+      		    <result name="error">/index.jsp</result>  
+      		</action> -->
+      		
+      		<!-- 进入新闻添加页面 -->
+      		<action name="newsadd" class="newsAction" method="loadNews">
+      		  <result name="ok">/adminhoutai/admin/news/NewsSave.jsp</result>  
+      		</action>
+      		
+      		<!-- 添加新闻 -->
+      		<action name="save" class="newsAction" method="saveNews">
+      		  <result name="ok" type="chain">newsall</result>
+      		  <result name="input">/adminhoutai/admin/news/NewsSave.jsp</result>  
+      		
+      		  <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+                <param name="allowedTypes">
+               
+                image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg
+                </param>
+                <!-- 文件大小, 以字节为单位 -->
+                <param name="maximumSize">2025956</param>
+            </interceptor-ref>
+            <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+            <interceptor-ref name="defaultStack" />
+      		
+      		</action>
+      		
+      		
+      	
+      		
+      		
+      		<!-- 进入一个用户新闻列表 -->
+      		<action name="allnews" class="newsAction" method="allNews">
+      		  <result name="ok">/adminhoutai/admin/news/NewsAll.jsp</result>
+      		  					
+      		</action>
+      			<!-- 网站进入一个新闻 -->
+      			<action name="shouyenews" class="newsAction" method="allNews">
+      		  <result name="ok">/web/bbx/news.jsp</result>
+      		  					
+      		</action>
+      		
+      			<action name="apshouyenews" class="newsAction" method="allNews">
+      		  <result name="ok">/AppWeb/news.jsp</result>
+      		  					
+      		</action>
+      		<action name="apnewsdetail" class="newsAction" method="newsDetail">
+      		  <result name="ok">/AppWeb/newsdetail.jsp</result>  
+      		</action>
+      		
+      		
+      		<!-- 进入一个新闻 -->
+      		<action name="findnews" class="newsAction" method="findNews">
+      		  <result name="ok">/adminhoutai/admin/news/NewsDetail.jsp</result>  
+      		</action>
+      		
+      		<!-- 网站进入一个新闻 -->
+      		<action name="newsdetail" class="newsAction" method="newsDetail">
+      		  <result name="ok">/web/bbx/detail.jsp</result>  
+      		</action>
+      		
+      		<!-- 进入一个新闻修改页面 -->
+      		<action name="updatenews" class="newsAction" method="findNews">
+      		  <result name="ok">/adminhoutai/admin/news/NewsUpdate.jsp</result>  
+      		</action>
+      		
+      		<!-- 进入一个管理员新闻列表 -->
+      		<action name="newsall" class="newsAction" method="allNews">
+      		  <result name="ok">/adminhoutai/admin/news/index.jsp</result>
+      		  					
+      		</action>
+      		
+      		<!--修改新闻成功后  -->
+      		<action name="newupdate" class="newsAction" method="updateNews">
+      		  
+      		  	  <result name="input">/adminhoutai/admin/news/NewsUpdate.jsp</result>  
+      			 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+                <param name="allowedTypes">
+               
+                image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg
+                </param>
+                <!-- 文件大小, 以字节为单位 -->
+                <param name="maximumSize">2025956</param>
+            </interceptor-ref>
+            <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+            <interceptor-ref name="defaultStack" />
+      		  <result name="ok" type="chain">newsall</result> 
+      		</action>
+      		
+      		<!-- 删除一个新闻 -->
+      		<action name="deletenews" class="newsAction" method="deleteNews">
+      		  <result name="ok" type="chain">newsall</result>  
+      		</action>
+      		
+      			<!-- 批量删除 -->
+      		
+      		<action name="deleteall" class="newsAction" method="deleteAllNews">
+      		   <result type="chain" name="OK">newsall</result>
+      		</action>
+      		
+      		
+      		
+      		
+      		
+      		
+      		<action name="jsonpage" class="newsAction" method="jsonPage">
+      		  <result name="ok" type="json"></result>  
+      		</action>
+      		
+      	
+  
+      	
+        
+        
+        
+     </package>
+ </struts>

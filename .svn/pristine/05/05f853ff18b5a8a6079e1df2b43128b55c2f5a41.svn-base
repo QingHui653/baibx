@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- service层 -->
+	<bean id="adminServiceI" class="com.hengshuo.baibx.service.impl.admin.AdminServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Admin</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="newsServiceI" class="com.hengshuo.baibx.service.impl.news.NewsServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.News</value>
+		</constructor-arg> 
+	</bean>
+	<bean id="userbServiceI" class="com.hengshuo.baibx.service.impl.userb.UserbServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Userb</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="uprelationServiceI" class="com.hengshuo.baibx.service.impl.userproduct.UprelationServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Uprelation</value>
+		</constructor-arg> 
+	</bean>
+	
+	
+	<bean id="productServiceI" class="com.hengshuo.baibx.service.impl.userproduct.ProductServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Product</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="payinformationServiceI" class="com.hengshuo.baibx.service.impl.pay.PayinformationServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Payinformation</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="groupuserServiceI" class="com.hengshuo.baibx.service.impl.group.GroupuserServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Groupuser</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="invitationServiceI" class="com.hengshuo.baibx.service.impl.group.InvitationServiceI">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Invitation</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="informationServiceI" class="com.hengshuo.baibx.service.impl.study.InformationServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Information</value>
+		</constructor-arg> 
+	</bean>
+	<bean id="collectionServiceI" class="com.hengshuo.baibx.service.impl.collection.CollectionServiceI">
+	<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Collection</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="feedbackServiceI" class="com.hengshuo.baibx.service.impl.feedback.FeedbackServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Feedback</value>
+		</constructor-arg> 
+	</bean>
+	<bean id="giftdetailServiceI" class="com.hengshuo.baibx.service.impl.shop.GiftdetailServiceI" >
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Giftdetail</value>
+		</constructor-arg> 
+	</bean>
+	<bean id="orderbServiceI" class="com.hengshuo.baibx.service.impl.shop.OrderbServiceI">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Orderb</value>
+		</constructor-arg> 
+	</bean>
+	<bean id="orderdetailServiceI" class="com.hengshuo.baibx.service.impl.shop.OrderdetailServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+		<value>com.hengshuo.baibx.model.Orderdetail</value>
+		</constructor-arg> 
+	</bean>
+	
+	<bean id="activationServiceI" class="com.hengshuo.baibx.service.impl.activation.ActivationServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+			<value>com.hengshuo.baibx.model.Activation</value>
+		</constructor-arg>
+	</bean>
+	<bean id="editionServiceI" class="com.hengshuo.baibx.service.impl.edition.EditionServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+			<value>com.hengshuo.baibx.model.Edition</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="flagServiceI" class="com.hengshuo.baibx.service.impl.flag.FlagServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+			<value>com.hengshuo.baibx.model.Flag</value>
+		</constructor-arg>
+	</bean>
+	
+	
+	
+	<!-- action -->
+	<bean id="adminAction" class="com.hengshuo.baibx.action.admin.AdminAction" scope="prototype">
+		<property name="adminServiceI">
+			<ref bean="adminServiceI"/>
+		</property>
+		<property name="admin">
+			<ref bean="admin"/>
+		</property>
+	</bean>
+	<bean id="newsAction" class="com.hengshuo.baibx.action.news.NewsAction" scope="prototype">
+		<property name="newsServiceI">
+			<ref bean="newsServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="news">
+			<ref bean="news"/>
+		</property>
+	</bean>
+	
+	<bean id="userbAction" class="com.hengshuo.baibx.action.userb.UserbAction" scope="prototype">
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="uprelationServiceI">
+			<ref bean="uprelationServiceI"/>
+		</property>
+		<property name="payinformationServiceI">
+			<ref bean="payinformationServiceI"/>
+		</property>
+		<property name="activationServiceI">
+			<ref bean="activationServiceI"/>
+		</property>
+	</bean>
+	
+	<bean id="uprelationAction" class="com.hengshuo.baibx.action.userproduct.UprelationAction" scope="prototype">
+		<property name="uprelationServiceI">
+			<ref bean="uprelationServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="productServiceI">
+			<ref bean="productServiceI"/>
+		</property>
+		<property name="payinformationServiceI">
+			<ref bean="payinformationServiceI"/>
+		</property>
+		<property name="flagService">
+			<ref bean="flagServiceI"/>
+		</property>
+		<property name="activationServiceI">
+			<ref bean="activationServiceI"/>
+		</property>
+	</bean>
+	
+	<bean id="productAction" class="com.hengshuo.baibx.action.userproduct.ProductAction" scope="prototype">
+		<property name="productServiceI">
+			<ref bean="productServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>	
+		
+	</bean>
+	<bean id="payinformationAction" class="com.hengshuo.baibx.action.pay.PayinformationAction" scope="prototype">
+		<property name="payinformationServiceI">
+			<ref bean="payinformationServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="activationServiceI">
+			<ref bean="activationServiceI"/>
+		</property>
+		
+	</bean>
+	<bean id="groupuserAction" class="com.hengshuo.baibx.action.group.GroupuserAction" scope="prototype">
+		<property name="groupuserServiceI">
+			<ref bean="groupuserServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="invitationServiceI">
+			<ref bean="invitationServiceI"/>
+		</property>
+	</bean>
+	
+	<bean id="invitationAction" class="com.hengshuo.baibx.action.group.InvitationAction" scope="prototype">
+		<property name="invitationServiceI">
+			<ref bean="invitationServiceI"/>
+		</property>
+		<property name="collectionServiceI">
+			<ref bean="collectionServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		
+	</bean>
+	
+	<bean id="informationAction" class="com.hengshuo.baibx.action.study.InformationAction" scope="prototype">
+		<property name="informationServiceI">
+			<ref bean="informationServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="newsServiceI">
+			<ref bean="newsServiceI"/>
+		</property>
+	</bean>
+	
+	<bean id="collectionAction" class="com.hengshuo.baibx.action.collection.CollectionAction" scope="prototype">
+		<property name="collectionServiceI">
+			<ref bean="collectionServiceI"/>
+		</property>
+		<property name="informationServiceI">
+			<ref bean="informationServiceI"/>
+		</property>
+		<property name="newsServiceI">
+			<ref bean="newsServiceI"/>
+		</property>
+	</bean>
+	
+	<bean id="feedbackAction" class="com.hengshuo.baibx.action.feedback.FeedbackAction" scope="prototype">
+		<property name="feedbackServiceI">
+			<ref bean="feedbackServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+	</bean>
+	<bean id="giftdetailAction" class="com.hengshuo.baibx.action.shop.GiftdetailAction" scope="prototype">
+		<property name="giftdetailServiceI">
+			<ref bean="giftdetailServiceI"/>
+		</property>
+		
+	</bean>
+	<bean id="orderbAction" class="com.hengshuo.baibx.action.shop.OrderbAction" scope="prototype">
+		<property name="orderbServiceI">
+			<ref bean="orderbServiceI"/>
+		</property>
+		<property name="orderdetailServiceI">
+			<ref bean="orderdetailServiceI"/>
+		</property>
+		<property name="giftdetailServiceI">
+			<ref bean="giftdetailServiceI"/>
+		</property>
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+		<property name="activationServiceI">
+			<ref bean="activationServiceI"/>
+		</property>
+	
+	</bean>
+	
+	<bean id="activationAction"  class="com.hengshuo.baibx.action.activation.ActivationAction" scope="prototype">
+		<property name="activationServiceI">
+			<ref bean="activationServiceI"/>
+		</property>
+	</bean>
+	
+	
+	
+	
+	<bean id="editionAction" class="com.hengshuo.baibx.action.edition.EditionAction" scope="prototype">
+		<property name="editionServiceI">
+			<ref bean="editionServiceI"/>
+		</property>
+	
+	</bean>
+	
+	
+	<bean id="yanshiAction" class="com.hengshuo.baibx.action.yanshi.YanshiAction" scope="prototype">
+	
+	</bean>
+	
+	
+	
+	
+	
+
+
+	
+
+</beans>
+	 
+	

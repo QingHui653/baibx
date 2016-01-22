@@ -1,0 +1,138 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+      <constant name="struts.custom.i18n.resources" value="messageResource"/>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.multipart.maxSize" value="104857600000"/>
+     
+     <package name="com.hengshuo.baibx.action.userb" extends="json-default">
+      	
+      		<!-- 用户登入 访问Json -->
+      		<action name="userlogin" class="userbAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		<!-- 修改密码 -->
+      		<action name="updateMiMa" class="userbAction" method="updateMiMa">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="wjimima" class="userbAction" method="wangJiMiMa">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		
+      		<action name="exit" class="userbAction" method="exit">   
+      			<result name="OK">/web/bbx/a.jsp</result>
+      		</action> 
+      		<action name="apexit" class="userbAction" method="exit">   
+      			<result name="OK">/AppWeb/a.jsp</result>
+      		</action>
+      		
+      		
+     		<action name="userblogin" class="userbAction" method="userLogin">   
+      			<result name="OK">/web/bbx/a.jsp</result>
+      			<result name="error">/web/bbx/login.jsp</result>
+      			
+      		</action> 
+      		
+     		<action name="apuserblogin" class="userbAction" method="userLogin">   
+      			<result name="OK">/AppWeb/a.jsp</result>
+      			<result name="error">/AppWeb/entry.jsp</result>
+      			
+      		</action> 
+      		
+      		
+      		
+      		<action name="yzm" class="userbAction" method="huoquyzm">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      			<!-- 注册 -->
+      		<action name="register" class="userbAction" method="register">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		
+      		<action name="renzhenbji" class="userbAction" method="bianJiMingP">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<!-- 进入到认证页面 -->
+      		<action name="rzpage" class="userbAction" method="renZhenPage">
+      		     <result name="OK"> /adminhoutai/admin/userb/renz.jsp</result> 
+      		</action>
+      		<!-- 反馈界面 -->
+      		<action name="fkuipage" class="userbAction" method="renZhenPage">
+      		     <result name="OK"> /adminhoutai/admin/Feedback/index.jsp</result> 
+      		</action>
+      		<!-- 保险代理人 -->
+      		<action name="dailiren" class="userbAction" method="daiLiRen">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="szdailiren" class="userbAction" method="sZDaiLiRen">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="jihuo" class="userbAction" method="jiHuo">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		<action name="jiHuoIOS" class="userbAction" method="jiHuoIOS">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="mp" class="userbAction" method="mingPian">
+      		     <result name="OK"> /adminhoutai/admin/userb/mingp.jsp</result> 
+      		</action>
+      		
+      		
+      		<action name="userlist" class="userbAction" method="listUser">
+      		     <result name="OK"> /adminhoutai/admin/userb/userlist.jsp</result> 
+      		</action>
+      		
+      			
+      		<action name="statuslist" class="userbAction" method="listUser">
+      		     <result name="OK"> /adminhoutai/admin/userb/userStatus.jsp</result> 
+      		</action>
+      		
+      		<action name="updateStatusPage" class="userbAction" method="updateStatusPage">
+      		     <result name="OK"> /adminhoutai/admin/userb/StatusUpdate.jsp</result> 
+      		</action>
+      		
+      		<action name="updatestatus" class="userbAction" method="updateStatus">
+      		      <result name="OK" type="chain">statuslist</result>  
+      		</action>
+      		
+      		
+       
+      		<action name="renz" class="userbAction" method="renZ">
+      		    <result name="OK" type="json"></result> 
+      		       
+      		      
+      		<!--    <result name="input">/adminhoutai/admin/news/NewsSave.jsp</result> -->
+      		 <!-- 	 <result name="input">/adminhoutai/admin/userb/mp.jsp</result>    --> 
+ 			<interceptor-ref name="fileUpload">
+             
+                <param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg</param>
+               
+                <param name="maximumSize">14857600000</param>
+           	 </interceptor-ref>
+          	
+          	  <interceptor-ref name="defaultStack" />
+          	   </action> 
+      		  
+      		  <action name="renZIOS" class="userbAction" method="renZIOS">
+      		    <result name="OK" type="json"></result> 
+      		  	<interceptor-ref name="fileUpload">
+             	<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png, image/pjpeg</param>
+               	<param name="maximumSize">14857600000</param>
+           	 	</interceptor-ref>
+          		<interceptor-ref name="defaultStack" />
+          	   </action>  
+      		     
+      		
+      
+        
+     </package>
+ </struts>

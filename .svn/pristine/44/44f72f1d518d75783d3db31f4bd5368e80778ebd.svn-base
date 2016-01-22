@@ -1,0 +1,12 @@
+/*.all{ padding-top:0%; width:100%; text-align:center; background-color:#92D050}
+.all td { background-color:#F7BA00; padding-top:2%; padding-bottom:2%; border:#FFFFFF 5px solid}
+.all a{text-decoration:none;color:#000000; }*/
+
+.all tr td { border-bottom:#E1E1E1 1px solid; text-align:center}
+.all{ border-top:#E1E1E1 1px solid; border-left:#E1E1E1 1px solid; border-right:#E1E1E1 1px solid}
+.name{ border-left:#E1E1E1 1px solid; border-right:#E1E1E1 1px solid}
+.or tr td{ text-align: right;padding-top:10px;}
+.le{ text-align:center;height:30px;}
+
+.ziti{ font-size:18px; height:40px; background-color:#F90; padding-top:15px; text-align:center}
+.ziti a{ text-decoration:none; }

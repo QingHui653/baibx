@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+body{ background-color:#a3e6f7;}
+a{text-decoration:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.box{ width:480px; height:200px; border: #a2d433 1px solid; background-color:white; margin:auto; margin-top:200px; padding-top:70px;border-radius: 10px;}
+.yonghu, .mima, .anniu{ width:260px; height:28px; margin:auto; margin-bottom:35px;}
+.text{ margin-top:5px;}
+.yonghuk{ width:172px; height:28px; border: #cccccc 1px solid;}
+.anniuk{width:172px; height:28px;}
+.anniuk a{ display:block; width:75px; height:28px; background-color: #a2d433; color:white; text-align:center; line-height:28px;}
+
+

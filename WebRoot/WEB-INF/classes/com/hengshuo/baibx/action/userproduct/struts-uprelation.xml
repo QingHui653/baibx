@@ -1,0 +1,44 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.userproduct" extends="json-default">
+      	
+      		
+      		<action name="customselect" class="uprelationAction" method="customSelect">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="myuserpage" class="uprelationAction" method="myUser">
+      		     <result name="OK" > /web/bbx/myuser.jsp</result> 
+      		</action>
+      		
+      		<action name="apmyuserpage" class="uprelationAction" method="myUser">
+      		     <result name="OK" > /AppWeb/myaccount.jsp</result> 
+      		</action>
+      		
+      		
+      		
+      		<action name="baoxianproduct" class="uprelationAction" method="baoXianProduct">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="baoXianProductIOS" class="uprelationAction" method="baoXianProductIOS">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      			
+      		<action name="myuser" class="uprelationAction" method="my">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		
+      		
+  
+      		
+      		
+      		
+   
+     </package>
+ </struts>

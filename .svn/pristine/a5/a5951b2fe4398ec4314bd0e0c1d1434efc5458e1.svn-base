@@ -1,0 +1,13 @@
+/* CSS Document */
+
+.table tr td{ height:55px; border-bottom:#F00 1px solid}
+.title{ background-color:#CCC; height:30px; padding-top:8px; float:left}
+.djl{ float:left; height:20px; padding-top:7px; padding-left:10px; color:#F33}
+
+.imgg{ height:20px;  padding-top:4px; float:right; padding-right:30px}
+.right{ float:right; padding-right:10px}
+.sxye tr td a{text-decoration:none; }
+.con a{text-decoration:none;color:#000000; }
+
+
+

@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.yanshi" extends="json-default">
+      	
+
+      		 <action name="imagePage" class="yanshiAction" method="imagePage">
+      		     <result name="OK">/web/images/image.jsp</result> 
+      		</action>
+      		
+      		<action name="videopage" class="yanshiAction" method="videoPage">
+      		  <result name="OK">/web/video/video.jsp</result>  
+      		</action>
+      		
+     </package>
+ </struts>

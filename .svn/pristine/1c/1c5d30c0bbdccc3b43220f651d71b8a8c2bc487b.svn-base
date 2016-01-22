@@ -1,0 +1,102 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.shop.orderb" extends="json-default">
+      	
+  <!-- 
+      		<action name="usJsonLogin" class="productAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		 -->
+      		  <action name="oblist" class="orderbAction" method="ordeblist">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/Oblist.jsp</result> 
+      		</action>
+      		
+      		<action name="wuliuyemian" class="orderbAction" method="wuliuyemian">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/wuliu.jsp</result> 
+      		</action>
+      		
+      		 <action name="wuliu" class="orderbAction" method="updateWuliu">
+      		     <result name="OK" type="chain">oblist</result> 
+      		</action>
+      		 
+      		 
+      		 <action name="goumai" class="orderbAction" method="gouMai">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/Order.jsp</result> 
+      		</action>
+      		
+      		 <action name="gouwuche" class="orderbAction" method="gouwuche">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/Order.jsp</result> 
+      		</action>
+      		
+      		 <action name="jiaru" class="orderbAction" method="jiaru">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		 <action name="dingdan" class="orderbAction" method="dingDan">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/OrderDetail.jsp</result> 
+      		</action>
+      		
+      		<!-- <action name="paydingDan" class="orderbAction" method="paydingDan">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/aa.jsp </result> 
+      		 </action> -->
+      		 
+      		 <action name="paydingDan" class="orderbAction" method="paydingDan">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/aa.jsp </result> 
+      		 </action>
+      		 
+      		 
+      		 <action name="paydingDans" class="orderbAction" method="paydingDan">
+      		     <result name="OK" type="chain">dingdanlist</result> 
+      		 </action>
+      		 
+      		 <action name="weizhif" class="orderbAction" method="weizhif">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/weifk.jsp </result> 
+      		 </action>
+      		
+      		<action name="dingdanlist" class="orderbAction" method="dingDanlist">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/Orderlist.jsp</result> 
+      		 </action>
+      		 
+      		 <action name="orderdetail" class="orderbAction" method="orderDetail">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/OrderdetailList.jsp</result> 
+      		 </action>
+      		 
+      		  <action name="songyuanb" class="orderbAction" method="songyuanbao">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/songyuanb.jsp</result> 
+      		 </action> 
+      		 
+      		 
+      		 
+      		 <action name="querenPay" class="orderbAction" method="querenPay">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/pay.jsp</result> 
+      		 </action> 
+      		 
+      		 <action name="push" class="orderbAction" method="pushjihuo">
+      		     <result name="OK" type="json"></result> 
+      		 </action> 
+
+      		 
+      	
+      	<!-- 	
+      		 <action name="addgouwuche" class="orderbAction" method="gouMai">
+      		     <result name="OK">/adminhoutai/admin/Giftdetail/GiftDetail.jsp </result>
+      		     	<param name="giftid">${giftid}</param>
+      		     
+      		</action> -->
+
+      		
+      	<!-- 	<action name="order" class="payinformationAction" method="orderProduct">
+      		     <result name="OK">/PayInformation/order.jsp</result> 
+      		</action>	
+      		
+      		<action name="paylist" class="payinformationAction" method="payList">
+      		     <result name="OK">/PayInformation/list.jsp</result> 
+      		</action>	
+      		 -->
+      		
+   
+     </package>
+ </struts>

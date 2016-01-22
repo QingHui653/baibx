@@ -1,0 +1,38 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.feedback" extends="json-default">
+      	
+
+      		
+      	<action name="addfeedback" class="feedbackAction" method="addFeedback">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      	<action name="feedbaockpage" class="feedbackAction" method="goPage">
+      		     <result name="OK" >/adminhoutai/admin/Feedback/Detail.jsp</result> 
+      		</action>
+      		
+      			<action name="PCFankui" class="feedbackAction" method="PCPage">
+      		     <result name="OK" >/web/bbx/fankuiDetail.jsp</result> 
+      		</action>		
+      		
+      		<action name="listFeedback" class="feedbackAction" method="listFeedback">
+      		     <result name="OK" >/adminhoutai/admin/Feedback/list.jsp</result> 
+      		</action>
+      		<action name="accept" class="feedbackAction" method="accept">
+      		     <result name="OK"  type="chain">listFeedback</result> 
+      		</action>
+      		
+      			<action name="Feeddetail" class="feedbackAction" method="feedbackDetail">
+      		     <result name="OK" >/adminhoutai/admin/Feedback/Feeddetail.jsp</result> 
+      		</action>
+      	
+     
+      			
+      		
+      		
+   
+     </package>
+ </struts>

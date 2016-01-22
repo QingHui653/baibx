@@ -1,0 +1,64 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     <package name="com.hengshuo.baibx.action.admin" extends="json-default">
+        <!-- 
+        	<global-results>
+    		<result name="error">/error.jsp</result>
+    	</global-results>
+    	
+		 <global-exception-mappings>
+    		<exception-mapping result="error" exception="java.lang.Exception"></exception-mapping>
+    	</global-exception-mappings>
+         -->
+   		<!-- 进入Admin 添加页面 -->
+     			<action name="loginAdmin" class="adminAction" method="loginAdmin">
+      		    <result name="OK">/adminhoutai/admin/admins/add.jsp</result>  
+      		</action>
+     	<!-- 添加成功 -->
+         	<action name="SaveAdmin" class="adminAction" method="saveOrUpdate">
+      		   <result type="chain" name="OK">Adminlist</result> 
+      		</action>
+      		<!-- 登入页面 -->
+      		<action name="adminlogin" class="adminAction" method="loginAdmin">
+				 <result name="OK">/adminhoutai/index.jsp</result>  
+      		</action>
+      		
+      		
+      		<!-- Admin 登入 -->
+      		<action name="Adminlogin" class="adminAction" method="login">
+      		   <!-- <result type="chain" name="OK">Adminlist</result> -->
+      		     <result name="OK">/adminhoutai/admin/main.jsp</result> 
+      		    <result name="error">/adminhoutai/index.jsp</result>  
+      		</action>
+      		<!-- Admin 登入返回Json -->
+      		<action name="JsonLogin" class="adminAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<!-- 进入Admin 列表 -->
+      		<action name="Adminlist" class="adminAction" method="findAll">
+      		  <result name="OK">/adminhoutai/admin/admins/index.jsp</result>  
+      		</action>
+      		
+      		<!-- 进入添加Admin -->
+      		<action name="AdminSave" class="adminAction" method="findAdmin">
+      		  <result name="OK">/adminhoutai/admin/admins/add.jsp</result>  
+      		</action>
+      		<!-- 删除 -->
+      		<action name="AdminDelete" class="adminAction" method="deleteAdmin">
+      		   <result type="chain" name="OK">Adminlist</result>
+      		</action>
+      		<!-- 批量删除 -->
+      		
+      		<action name="AdminDeleteAll" class="adminAction" method="deleteAllAdmin">
+      		   <result type="chain" name="OK">Adminlist</result>
+      		</action>
+  
+      	
+        
+        
+        
+     </package>
+ </struts>

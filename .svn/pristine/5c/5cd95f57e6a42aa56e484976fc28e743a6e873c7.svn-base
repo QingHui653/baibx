@@ -1,0 +1,47 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     <constant name="struts.custom.i18n.resources" value="messageResource"/>
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+     <constant name="struts.multipart.maxSize" value="220000000"/>
+     <package name="com.hengshuo.baibx.action.edition" extends="json-default">
+ 
+     <!-- 	<action name="edi" class="editionAction" method="add">
+      		    <result name="OK" type="json"></result>  
+      	</action> -->
+      		<action name="jcha" class="editionAction" method="fhui">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      
+      	
+      	
+      	<action name="edupload" class="editionAction" method="add">
+      		    
+      		      <result name="input">/adminhoutai/admin/APK/APKSave.jsp</result>  
+      		 	 <interceptor-ref name="fileUpload">
+                <!-- 文件过滤 -->
+               <!-- 文件大小, 以字节为单位 -->
+               <param name="maximumSize">220000000</param>
+           	 </interceptor-ref>
+          	  <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+          	  <interceptor-ref name="defaultStack" />
+      		      <result name="OK"> /adminhoutai/index.jsp</result>      
+      	</action>
+      	
+      	
+      	<action name="eddown" class="editionAction" method="downloadFile"> 
+      		<result name="OK" type="stream"> 
+      		<param name="contentType">application/octet-stream</param> 
+       		<param name="contentDisposition">attachment;filename="${fileFileName}"</param> 
+      		<param name="inputName">downloadFile</param>
+      		  <!-- 下载文件的缓冲大小 -->  
+      		  <param  name="bufferSize">4096</param> 
+      		 </result> 
+      	</action>
+      		
+  
+     
+     </package>
+ </struts>

@@ -1,0 +1,42 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+   <struts>
+     
+     <package name="com.hengshuo.baibx.action.collection" extends="json-default">
+      	
+  <!-- 
+      		<action name="usJsonLogin" class="productAction" method="jsonLogin">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		 -->
+      		
+      		<action name="shouclj" class="collectionAction" method="listJson">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      		<action name="addshoucan" class="collectionAction" method="add">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      		
+      	<!-- 	<action name="addshoucan" class="collectionAction" method="addShouCan">
+      		     <result name="OK" type="json"></result> 
+      		</action> -->
+      		<action name="shoucanlist" class="collectionAction" method="findShouCanList">
+      		     <result name="OK"> /adminhoutai/admin/Collection/shouclist.jsp</result> 
+      		</action>
+      		
+      		<action name="mohulist" class="collectionAction" method="moHuFind">
+      		     <result name="OK"> /adminhoutai/admin/Collection/shouclist.jsp</result> 
+      		</action>
+      		
+      		<action name="zhidingshoucan" class="collectionAction" method="zhiDing">
+      		     <result name="OK" type="json"></result> 
+      		</action>
+      	
+      		
+      			
+      		
+      		
+     </package>
+ </struts>

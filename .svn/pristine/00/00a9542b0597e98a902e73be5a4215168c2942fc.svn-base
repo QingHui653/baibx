@@ -1,0 +1,21 @@
+/*.all{ padding-top:0%; width:100%; text-align:center; background-color:#92D050}
+.all td { background-color:#F7BA00; padding-top:2%; padding-bottom:2%; border:#FFFFFF 5px solid}
+.all a{text-decoration:none;color:#000000; }*/
+
+.alls tr td { border-bottom:#E1E1E1 1px solid; text-align:center; padding-bottom:5px; padding-top:5px;}
+.alls{ border-top:#E1E1E1 1px solid; border-left:#E1E1E1 1px solid; border-right:#E1E1E1 1px solid; margin-top:8px; background-color:#F2F7FF}
+.name{ border-left:#E1E1E1 1px solid; border-right:#E1E1E1 1px solid}
+.as{ padding-top:12px;}
+
+
+.all{ text-align:left; background-color:#FFC8AC; border:#FF5500 1px solid }
+.a{ color:#F00; text-decoration:none}
+
+
+.all tr td{ padding-top:5px;}
+.sj{ text-align:left}
+.fi{ text-align:left; width:110px } 
+.ss{ margin-left:5px}
+.dd{ margin-top:15px; background-color:#FFC8AC}
+.dd tr td { padding-top: 5px;}
+.lef{ width: 95px;}
