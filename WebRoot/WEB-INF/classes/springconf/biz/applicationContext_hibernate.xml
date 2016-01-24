@@ -120,6 +120,9 @@
 				<value>
 					com/hengshuo/baibx/model/Flag.hbm.xml
 				</value>
+				<value>
+					com/hengshuo/baibx/model/Message.hbm.xml
+				</value>
 				
 				
 				
@@ -229,6 +232,7 @@
 			<idref bean="activationServiceI"/>
 			<idref bean="editionServiceI"/>
 			<idref bean="flagServiceI"/>
+			<idref bean="messageServiceI"/>
 			
 			
 				<!-- <idref bean="Sys_SystemService" />
@@ -270,4 +274,5 @@
 	<bean id="activation" class="com.hengshuo.baibx.model.Activation"></bean>
 	<bean id="edition" class="com.hengshuo.baibx.model.Edition"></bean>
 	<bean id="flag" class="com.hengshuo.baibx.model.Flag"></bean>
+	<bean id="message" class="com.hengshuo.baibx.model.Message"></bean>
 </beans>

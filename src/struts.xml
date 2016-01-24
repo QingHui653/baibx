@@ -38,6 +38,8 @@
    <include file="com/hengshuo/baibx/action/yanshi/struts-Yanshi.xml" />
    
    
+   <include file="com/hengshuo/baibx/action/message/struts-message.xml" />
+   
    
    
    <!--  <include file="com/hengshuo/baibx/action/bbs/struts-userlogin.xml" /> 

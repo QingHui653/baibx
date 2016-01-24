@@ -151,6 +151,14 @@
 			<value>com.hengshuo.baibx.model.Flag</value>
 		</constructor-arg>
 	</bean>
+	<bean id="messageServiceI" class="com.hengshuo.baibx.service.impl.message.MessageServiceI">
+			<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		<constructor-arg>
+			<value>com.hengshuo.baibx.model.Message</value>
+		</constructor-arg>
+	</bean>
 	
 	
 	
@@ -335,7 +343,15 @@
 	
 	</bean>
 	
-	
+	<bean id="messageAction" class="com.hengshuo.baibx.action.message.MessageAction" scope="prototype">
+		<property name="messageServiceI">
+			<ref bean="messageServiceI"/>
+		</property>
+		
+		<property name="userbServiceI">
+			<ref bean="userbServiceI"/>
+		</property>
+	</bean>
 	
 	
 	

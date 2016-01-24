@@ -1,0 +1,17 @@
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messageResource" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.multipart.maxSize" value="1024102400" />
+	<package name="com.hengshuo.baibx.action.message.MessageAction"
+		extends="json-default">
+
+	<action name="listMessage" class="messageAction" method="listMessage">
+      		  <result name="OK">/web/bbx/listMessage.jsp</result>  
+      		</action>
+	
+
+	</package>
+</struts>
